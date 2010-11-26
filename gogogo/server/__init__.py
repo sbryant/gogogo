@@ -12,7 +12,6 @@ conn = m2_handler.Connection("54BD6A25-09AC-4964-BE98-F219E8F65C07", "tcp://127.
 
 class ZMQServer(ServerAdapter):
     def run(self, handler):
-        import sys
         while True:
             req = conn.recv()
 
