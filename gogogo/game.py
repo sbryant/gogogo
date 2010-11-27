@@ -61,7 +61,7 @@ class Game(object):
 
 
     def get_board(self, branch=None):
-        branch = branch or 'master'
+        branch = branch or self.branch
         if branch not in self.branches(): raise GameError("Unknown branch")
         return BoardState.from_json(
             self.repo[
